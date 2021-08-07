@@ -10,7 +10,7 @@ html{
     --black: #0D114F;
     --white: #fafafa;
     --red: #E83F5B;
-    --ligth-blue: #E0ECFF;
+    --light-blue: #E0ECFF;
     --blue: #3485FF;
     --background: #F6FAFF;
     --overlay: #040911;
@@ -19,6 +19,8 @@ html{
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #eaecf2;
+
 
     font-size: 62.5%;
 }
