@@ -1,0 +1,27 @@
+{
+  "name": "rocketq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmiller1/nwl-together-rocketq.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielmiller1/nwl-together-rocketq/issues"
+  },
+  "homepage": "https://github.com/gabrielmiller1/nwl-together-rocketq#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
