@@ -1,12 +1,30 @@
 const Database = require('../db/config');
 module.exports = {
-    index(req, res) {
+    async index(req, res) {
+        const db = await Database();
         const roomId = req.params.room;
         const questionId = req.params.question;
         const action = req.params.action;
         const password = req.body.password;
 
-        console.log(roomId, " ", questionId, " ", action, " ", password)
+        const verifyRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`);
+
+        if (verifyRoom.pass == password) {
+            console.log(action);
+            if (action == "delete") {
+                
+                await db.run(`DELETE FROM questions WHERE id = ${questionId}`);
+                
+            } else if (action == "check"){
+                console.log(action);
+                await db.run(`UPDATE questions SET checked = 1 WHERE id = ${questionId}`);
+
+            }
+        } else{
+            res.render('pass-incorrect', {roomId: roomId});
+        }
+
+        res.redirect(`/room/${roomId}`);
     },
 
     async create(req, res) {
@@ -24,6 +42,6 @@ module.exports = {
             ${roomId}
             )`);
 
-            res.redirect(`/room/${roomId}`);
+        res.redirect(`/room/${roomId}`);
     }
 }

@@ -26,7 +26,7 @@
         rel="stylesheet">
 
     <!-- SCRIPT -->
-    <script src="/public/scripts/main.js" defer type="module"></script>
+    <script src="/scripts/main.js" defer type="module"></script>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                     #<%= roomId %>
                         <img src="/images/copy.svg" alt="Copiar numero da sala">
                 </div>
-                <a href="#" class="button">
+                <a href="/create-pass" class="button">
                     <img src="/images/users-white.svg" alt="Criar uma sala">
                     Criar Sala
                 </a>
@@ -67,6 +67,10 @@
 
                 <div class="questions">
 
+                    <% if (isNoQuestions){ %>
+                        <%- include('parts/no-question') %>
+                    <% } %>
+
                     <% questions.forEach(question=> { %>
                         <div class="question-wrapper">
                             <div class="question-content">
@@ -90,8 +94,9 @@
                                 </a>
                             </div>
                         </div>
-                        <% })%>
-                            <% questionsRead.forEach(questionRead=> {%>
+                        <% }); %>
+
+                            <% questionsRead.forEach(questionRead => { %>
                                 <div class="question-wrapper read">
                                     <div class="question-content">
                                         <div class="user">
@@ -104,13 +109,13 @@
                                         </div>
                                     </div>
                                     <div class="actions">
-                                        <a href="#" class="check" data-id="<%= questionRead.id %>>">
-                                            <img src="/images/check.svg" alt="Marcar como lida">
-                                            Pergunta lida
+                                        <a href="#" class="delete" data-id="<%= questionRead.id %>">
+                                            <img src="/images/trash.svg" alt="Excluir">
+                                            Excluir
                                         </a>
                                     </div>
                                 </div>
-                            <% }); %>
+                                <% }); %>
                 </div>
 
             </section>
@@ -125,7 +130,7 @@
             <h2>Excluir pergunta</h2>
             <p>Tem certeza que você deseja excluir esta pergunta ?</p>
 
-            <form action="" method="POST">
+            <form action="#" method="POST">
                 <label class="sr-only" for-id="password">Digite sua senha admin</label>
                 <input type="password" name="password" placeholder="Digite sua senha">
 
