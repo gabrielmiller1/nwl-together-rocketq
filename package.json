@@ -19,7 +19,9 @@
   "homepage": "https://github.com/gabrielmiller1/nwl-together-rocketq#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
