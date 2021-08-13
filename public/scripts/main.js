@@ -41,9 +41,9 @@ function handleClick(event, check = true) {
 
 const buttonCopy = document.getElementById('room-id')
 
-buttonCopy.addEventListener('click', copyId);
+buttonCopy.addEventListener('click', clickToCopy);
 
-function copyId(){
+function clickToCopy(){
 
     let inputElement = document.createElement('input');
     inputElement.type = 'text';
