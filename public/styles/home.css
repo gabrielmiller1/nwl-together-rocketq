@@ -12,6 +12,15 @@ header{
     grid-area: header;
 }
 
+header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+header div button{
+    width: 35%;
+}
+
 #bg{
     grid-area: left;
 
@@ -50,6 +59,10 @@ input{
 input, button, .button{
     width: 100%;
     margin-bottom: 1.8rem;
+}
+
+ button{
+    color: #fafafa;
 }
 
 /* Separator Line */

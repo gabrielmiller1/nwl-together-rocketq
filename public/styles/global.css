@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html{
+:root{
     --black: #0D114F;
     --white: #fafafa;
     --red: #E83F5B;
@@ -25,6 +25,24 @@ html{
 
 
     font-size: 62.5%;
+}
+
+.dark-mode{
+    --black: #fafafa;
+    --white: #0D114F;
+    --red: #E83F5B;
+    --light-blue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #121212;
+    --overlay: #040911;
+    --icons-details: #fafafa;
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-light: #E5EAF1;
+    --grey-medium: #eaecf2;
+
+    --black-opacity: rgb(4, 9, 17, .8);
 }
 
 body {
@@ -91,14 +109,14 @@ button > img, .button > img{
 }
 
 button.outlined, .button.outlined{
-    background: var(--white);
+    background: var(--background);
     color: var(--blue);
     border: .2rem solid var(--blue);
 }
 
 button.red, .button.red{
     background: var(--red);
-    color: var(--white);
+    color: #fafafa;
 }
 
 button.grey, .button.grey{

@@ -1,3 +1,4 @@
+import { on } from 'nodemon';
 import Modal from './modal.js';
 
 const modal = Modal()
@@ -39,7 +40,7 @@ function handleClick(event, check = true) {
 };
 
 
-const buttonCopy = document.getElementById('room-id')
+const buttonCopy = document.getElementById('room-id');
 
 buttonCopy.addEventListener('click', clickToCopy);
 
@@ -58,5 +59,17 @@ function clickToCopy(){
 
     alert(`O texto copiado é: ${copiedContent}`);
 }
+
+window.onload(console.log(buttonDarkMode))
+
+
+const buttonDarkMode = document.querySelector('#button-darkmode');
+
+buttonDarkMode.addEventListener('click', conse);
+
+function conse() {
+    console.log('çedlkemlsd')
+}
+
 
 

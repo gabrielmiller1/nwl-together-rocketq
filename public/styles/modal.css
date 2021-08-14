@@ -18,7 +18,7 @@
 
 .modal-wrapper .modal{
     width: min(59rem, 90%);
-    background: var(--white);
+    background: var(--background);
     margin: auto;
 
     border-radius: .8rem;
@@ -36,7 +36,7 @@
 
 .modal-wrapper .modal p{
     margin-bottom: 2.4rem;
-    color: var(--grey-dark);
+    color: var(--black);
 }
 
 .modal-wrapper .modal input{
@@ -56,6 +56,10 @@
 
 .modal-wrapper .modal .buttons > .button{
     margin-right: .8rem;
+}
+
+.modal-wrapper .modal .buttons > button{
+    color:#fafafa;
 }
 
 .modal-wrapper .modal .buttons > button, 

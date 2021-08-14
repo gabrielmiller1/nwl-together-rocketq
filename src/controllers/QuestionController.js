@@ -10,13 +10,12 @@ module.exports = {
         const verifyRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`);
 
         if (verifyRoom.pass == password) {
-            console.log(action);
+
             if (action == "delete") {
                 
                 await db.run(`DELETE FROM questions WHERE id = ${questionId}`);
                 
             } else if (action == "check"){
-                console.log(action);
                 await db.run(`UPDATE questions SET checked = 1 WHERE id = ${questionId}`);
 
             }
